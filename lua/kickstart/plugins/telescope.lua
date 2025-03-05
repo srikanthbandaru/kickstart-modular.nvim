@@ -61,7 +61,18 @@ return {
         --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
         --   },
         -- },
-        -- pickers = {}
+        pickers = {
+          find_files = {
+            -- finds hidden files while respecting .gitignore rules
+            find_command = { 'rg', '--files', '--hidden', '--glob', '!**/.git/**', '--ignore-file', '.gitignore' },
+          },
+          live_grep = {
+            -- searches within hidden files while respecting .gitignore rules
+            additional_args = function()
+              return { '--hidden', '--glob', '!**/.git/**', '--ignore-file', '.gitignore' }
+            end,
+          },
+        },
         extensions = {
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
