@@ -39,6 +39,8 @@ require('lazy').setup({
 
   require 'custom/plugins/catppuccin',
 
+  require 'custom/plugins/typescript-tools',
+
   require 'kickstart/plugins/todo-comments',
 
   require 'kickstart/plugins/mini',
