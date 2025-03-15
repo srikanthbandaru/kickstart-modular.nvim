@@ -43,6 +43,10 @@ require('lazy').setup({
 
   require 'custom.plugins.alpha',
 
+  require 'custom.plugins.typr',
+
+  require 'custom.plugins.copilot',
+
   require 'kickstart/plugins/todo-comments',
 
   require 'kickstart/plugins/mini',
