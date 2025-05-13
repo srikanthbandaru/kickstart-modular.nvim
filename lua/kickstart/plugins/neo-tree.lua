@@ -10,7 +10,7 @@ return {
     'MunifTanjim/nui.nvim',
     '3rd/image.nvim',
   },
-  cmd = 'Neotree',
+  lazy = false,
   keys = {
     -- key mapping to reveal the current file
     { '\\', '<cmd>Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
